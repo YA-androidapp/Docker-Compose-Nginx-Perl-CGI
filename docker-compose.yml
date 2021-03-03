@@ -1,0 +1,12 @@
+version: "3"
+services:
+  perlcgi:
+    image: perlcgi
+    container_name: perlcgi
+    build:
+      context: ./docker
+
+    volumes:
+      - ./log:/var/log/nginx/web
+    ports:
+      - "8080:80"
